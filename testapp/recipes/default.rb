@@ -14,5 +14,5 @@ git "/var/www/test" do
 end
 
 execute "start forever" do
-  command "forever start -w /var/www/test/server.js 4001"
+  command "forever start -w /var/www/test/app.js 4001"
 end
