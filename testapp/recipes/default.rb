@@ -21,6 +21,3 @@ if node[:deploy]['appshortname'][:application] =="app_1_prod"
   end
   next
 end
-else
-  Chef::Log.debug("WHAT IS THIS!!!!!!!!")
-end
