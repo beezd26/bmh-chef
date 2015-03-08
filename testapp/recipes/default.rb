@@ -7,6 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
+include_recipe 'dependencies'
+
 if node[:deploy]['appshortname'][:application] =="app_1_prod"
   Chef::Log.debug("DEPLOYING THE TEST!!!!!!")
   git "/var/www/test" do
