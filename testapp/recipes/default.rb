@@ -12,7 +12,6 @@ git "/var/www/test" do
      revision "master"
      action :export
 end
-
 execute "start forever" do
   command "forever start -w /var/www/test/app.js 4001"
 end
