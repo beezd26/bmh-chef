@@ -19,7 +19,7 @@ node[:deploy].each do |application, deploy|
          action :sync
     end
     execute "start forever" do
-      user "root"
+      user "ec2-user"
       command "forever stopall --uid 'prod'"
       command "forever start -w --uid 'prod' -a /var/www/test/app.js 8001"
     end
