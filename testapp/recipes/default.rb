@@ -26,4 +26,19 @@ node[:deploy].each do |application, deploy|
     end
     next
   end
+  if application == "app_1_stage"
+    Chef::Log.debug("DEPLOYING THE TEST!!!!!!")
+    git "/var/www/test/stage/" do
+         repository "https://github.com/beezd26/TestAPI.git"
+         revision "master"
+         action :sync
+    end
+    execute "start forever" do
+      user "ec2-user"
+      cwd "/var/www/test/stage"
+      command "forever stopall --uid 'stage'"
+      command "forever start -w --uid 'stage' -a -p /home/ec2-user/.forever app.js 8005"
+    end
+    next
+  end
 end
