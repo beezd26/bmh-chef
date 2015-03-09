@@ -19,7 +19,7 @@ node[:deploy].each do |application, deploy|
          action :export
     end
     execute "start forever" do
-      command "forever start -w /var/www/test/app.js 4001"
+      command "forever start -w /var/www/test/app.js 8001"
     end
     next
   end
