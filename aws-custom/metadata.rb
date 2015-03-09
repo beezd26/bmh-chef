@@ -1,0 +1,10 @@
+name             'aws-custom'
+maintainer       'YOUR_NAME'
+maintainer_email 'YOUR_EMAIL'
+license          'All rights reserved'
+description      'Installs/Configures aws-custom'
+long_description 'Installs/Configures aws-custom'
+version          '0.1.0'
+
+depends 'aws', '>= 0.2.4'
+provides 'aws-tag::ec2'
