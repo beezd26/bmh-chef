@@ -6,5 +6,5 @@ description      'Installs/Configures aws-custom'
 long_description 'Installs/Configures aws-custom'
 version          '0.1.0'
 
-depends 'aws', '~> 2.6.4'
+depends 'aws', '= 2.5.0'
 provides 'aws-tag::ec2'

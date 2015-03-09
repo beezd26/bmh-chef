@@ -2,4 +2,4 @@ source "https://supermarket.chef.io"
 
 metadata
 
-cookbook 'aws', '>= 0.2.4'
+cookbook 'aws', '= 2.5.0'
