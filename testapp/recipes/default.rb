@@ -13,7 +13,7 @@ include_recipe 'dependencies'
 node[:deploy].each do |application, deploy|
   if application == "app_1_prod"
     Chef::Log.debug("DEPLOYING THE TEST!!!!!!")
-    git "/var/www/test" do
+    git "/var/www/test/" do
          repository "https://github.com/beezd26/TestAPI.git"
          revision "master"
          action :sync
