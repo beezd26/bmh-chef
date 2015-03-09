@@ -16,7 +16,7 @@ node[:deploy].each do |application, deploy|
     git "/var/www/test" do
          repository "https://github.com/beezd26/TestAPI.git"
          revision "master"
-         action :export
+         action :sync
     end
     execute "start forever" do
       command "forever stopall"
