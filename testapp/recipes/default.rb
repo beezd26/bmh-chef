@@ -20,8 +20,9 @@ node[:deploy].each do |application, deploy|
     end
     execute "start forever" do
       user "ec2-user"
+      cwd "/var/www/test"
       command "forever stopall --uid 'prod'"
-      command "forever start -w --uid 'prod' -a /var/www/test/app.js 8001"
+      command "forever start -w --uid 'prod' -a app.js 8001"
     end
     next
   end
